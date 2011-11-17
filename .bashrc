@@ -13,7 +13,7 @@ shopt -s histappend
 
 # Remove duplicates from history
 export HISTCONTROL="ignoredups"
-export HISTIGNORE="&:ls:[bf]g:exit"
+export HISTIGNORE="&:ls:cd -:[bf]g:exit"
 
 # Keep multiline commands as one command in history
 shopt -s cmdhist
