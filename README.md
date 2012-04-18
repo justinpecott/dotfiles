@@ -3,4 +3,5 @@ This is my current Bash setup as well as some other configs that I don't want to
 
 ## Prior Art, Origins, Credits
 * [MatthewsShellConfig](https://github.com/matthewmccullough/MatthewsShellConfig)
+* [dotfiles](https://github.com/mathiasbynens/dotfiles)
 
