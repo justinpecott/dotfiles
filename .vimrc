@@ -3,9 +3,14 @@ syntax on                                     " syntax highlighting
 filetype plugin indent on                     " load filetype plugins/indent settings
 set autochdir                                 " always switch to the current file directory
 set backspace=indent,eol,start                " make backspace a more flexible
+set ttyfast                                   " optimize for fast terminal connections
 set backup                                    " make backup files
 set backupdir=~/.vim/backup                   " where to put backup files
-set directory=~/.vim/tmp                      " directory to place swap files in
+set directory=~/.vim/swap                     " directory to place swap files in
+if exists("&undodir")                         "
+	set undodir=~/.vim/undo                   " directory for undo
+endif                                         "
+set cursorline                                " highlight cursor line
 set noerrorbells                              " don't make noise
 set wildmenu                                  " turn on command line completion wild style
 set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,   " ignore these list file extensions
@@ -16,10 +21,10 @@ set laststatus=2                              " always show the status line
 set lazyredraw                                " do not redraw while running macros
 set linespace=0                               " don't insert any extra pixel lines betweens rows
 set list                                      " we do what to show tabs, to ensure we get them out of my files
-set listchars=tab:>-                          " show tabs
+set listchars=tab:▸\ ,trail:·                 " show tabs and trailing spaces
 set showmatch                                 " show matching brackets
 set matchtime=5                               " how many tenths of a second to blink matching brackets for
-set nohlsearch                                " do not highlight searched for phrases
+set hlsearch                                  " do not highlight searched for phrases
 set nostartofline                             " leave my cursor where it was
 "set number                                    " turn on line numbers
 set numberwidth=5                             " We are good up to 99999 lines
@@ -58,9 +63,21 @@ set autoindent                                " Set autoindent
 set smartindent                               " Set smart indent
 set copyindent                                " use existing indents for new indents
 set preserveindent                            " save as much indent structure as possible
+set showmode                                  " show the current mode
+set title                                     " show title in the window bar
 
 "Fix some typos
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
+
+" Strip trailing whitespace (,ss)
+function! StripWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
+noremap <leader>ss :call StripWhitespace()<CR>
