@@ -1,11 +1,17 @@
-# Folder view configuration files
+.classpath
+.project
+.settings
+target
+plugins
+.idea
+*~
+*.ipr
+*.iws
+*.iml
+stacktrace.log
 .DS_Store
 Desktop.ini
-
-# Thumbnail cache files
 ._*
 Thumbs.db
-
-# Files that might appear on external disks
 .Spotlight-V100
 .Trashes

@@ -10,7 +10,7 @@ set directory=~/.vim/swap                     " directory to place swap files in
 if exists("&undodir")                         "
 	set undodir=~/.vim/undo                   " directory for undo
 endif                                         "
-set cursorline                                " highlight cursor line
+"set cursorline                                " highlight cursor line
 set noerrorbells                              " don't make noise
 set wildmenu                                  " turn on command line completion wild style
 set wildignore=*.dll,*.o,*.obj,*.bak,*.exe,   " ignore these list file extensions

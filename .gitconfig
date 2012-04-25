@@ -1,26 +1,42 @@
 [user]
-	name = Justin Pecott
-	email = justinpecott@gmail.com
+    name = Justin Pecott
+    email = justin@pecott.net
 [color]
-	ui = auto
+    ui = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
+[core]
+    quotepath = false
+    autocrlf = input
+    safecrlf = true
+    editor = vim
 [alias]
-	sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
+    br = branch -a
+    st = status
+    ci = commit
+    co = checkout
+    l = log --stat -C -3
+    ll = log --stat -C
+    info = !echo "= REMOTES ====" && git remote -v && echo "= BRANCHES ===" && git branch -a && echo "= STATUS =====" && git status -s
+    d = diff --color-words
+    dh = diff HEAD
+    dc = diff --staged
+    who = shortlog -s --
+    graph = log --pretty=oneline --abbrev-commit --graph --decorate=short --all
+    graph2 = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset> %Cblue%ad%Creset [%Cgreen%an%Creset] %Cblue%s%Creset\" --all --date=short
+    sync = !git pull --rebase && git push
+    gcap = gc --aggressive --prune
+    scrub = !git reset --hard && git clean -fd
+    sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[branch]
