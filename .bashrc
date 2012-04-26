@@ -36,7 +36,9 @@ export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
 # Dev environment
 # export JAVA_HOME=/Library/Java/Home
-export PATH=$HOME/bin:$PATH
+export JRUBY_HOME=/opt/jruby-1.6.7
+export PATH=$JRUBY_HOME/bin:$PATH
+export GRAILS_HOME=/opt/grails
 
 # Ruby
 export ri="--format ansi -T"
