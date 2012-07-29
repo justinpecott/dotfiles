@@ -27,3 +27,9 @@
     scrub = !git reset --hard && git clean -fd
     sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [branch]
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
