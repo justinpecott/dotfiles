@@ -20,8 +20,7 @@
     dh = diff HEAD
     dc = diff --staged
     who = shortlog -s --
-    graph = log --pretty=oneline --abbrev-commit --graph --decorate=short --all
-    graph2 = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset> %Cblue%ad%Creset [%Cgreen%an%Creset] %Cblue%s%Creset\" --all --date=short
+    graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --tags
     sync = !git pull --rebase && git push
     gcap = gc --aggressive --prune
     scrub = !git reset --hard && git clean -fd
