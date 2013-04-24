@@ -61,7 +61,11 @@ function parse_git_dirty() {
 }
 
 function parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1$(parse_git_dirty)/"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1$(parse_git_local_commits)$(parse_git_dirty)/"
+}
+
+function parse_git_local_commits() {
+    [[ $(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ') -gt 0 ]] && echo "^"
 }
 
 ######################### prompt #####################################
