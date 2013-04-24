@@ -10,6 +10,8 @@ DIRSTACKSIZE=20                # number of dirs on the stack
 setopt NO_BEEP                 # self explanatory
 zstyle ':completion:*:sudo:*' command-path ~/bin /usr/local/sbin /usr/local/bin \
                              /usr/sbin /usr/bin /sbin /bin
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 
 ######################### history options ############################
 HISTFILE=~/.history            # history file
@@ -47,6 +49,10 @@ alias history='fc -l 1'
 autoload -U compinit
 compinit
 
+#i####################### dev environment ############################
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH:/usr/local/opt/ruby/bin:/usr/local/share/python
+
 ######################### rvm ########################################
 
 ######################### git functions ##############################
@@ -61,4 +67,3 @@ function parse_git_branch() {
 ######################### prompt #####################################
 setopt PROMPT_SUBST
 PROMPT='[%{$fg_bold[blue]%}%n%{$reset_color%}@%{$fg_bold[green]%}%m%{$reset_color%} %{$fg[magenta]%}%c%{$reset_color%}%{$fg[red]%}$(parse_git_branch)%{$reset_color%}]$ '
-
