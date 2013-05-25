@@ -20,7 +20,7 @@ SAVEHIST=10000                 # unique events guarenteed
 setopt APPEND_HISTORY          # don't overwrite
 setopt SHARE_HISTORY           # share history between sessions
 setopt EXTENDED_HISTORY        # store time in history
-#setopt HIST_IGNORE_ALL_DUPS    # ignore duplicates of the previous event
+setopt HIST_IGNORE_ALL_DUPS    # ignore duplicates of the previous event
 setopt HIST_EXPIRE_DUPS_FIRST  # unique events are more usefull to me
 setopt HIST_VERIFY             # Make those history commands nice
 
@@ -44,6 +44,8 @@ alias la='ls -la'
 alias larth='ls -larth'
 alias vi=vim
 alias history='fc -l 1'
+alias subl='subl -n'
+alias rspec='rspec --color --format doc'
 
 ######################### compinit ###################################
 autoload -U compinit
