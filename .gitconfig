@@ -5,9 +5,7 @@
     ui = auto
 [core]
     quotepath = false
-    autocrlf = input
-    safecrlf = true
-    editor = vim
+    editor = subl -n -w
 [alias]
     br = branch -a
     st = status
@@ -20,15 +18,23 @@
     dh = diff HEAD
     dc = diff --staged
     who = shortlog -s --
-    graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches --tags
+    graph = log --pretty=oneline --abbrev-commit --graph --decorate=short --all
+    graph2 = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset> %Cblue%ad%Creset [%Cgreen%an%Creset] %Cblue%s%Creset\" --all --date=short
     sync = !git pull --rebase && git push
     gcap = gc --aggressive --prune
     scrub = !git reset --hard && git clean -fd
     sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [branch]
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false
+    prompt = false
 [diff]
-	tool = Kaleidoscope
+    tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+[mergetool]
+    prompt = false
+[merge]
+    tool = Kaleidoscope

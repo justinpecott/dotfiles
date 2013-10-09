@@ -1,4 +1,5 @@
 # .bashrc
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -35,8 +36,10 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd;exit:date:* --help"
 
 # Dev environment
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_07.jdk/Contents/Home
-export PATH=$HOME/bin:/usr/local/bin:$PATH:/usr/local/opt/ruby/bin:/usr/local/share/python
+export LDFLAGS=-L/usr/local/opt/sqlite/lib
+export CPPFLAGS=-I/usr/local/opt/sqlite/include
+export JAVA_HOME=`/usr/libexec/java_home`
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH
 
 # Ruby
 export ri="--format ansi -T"
@@ -48,11 +51,15 @@ export CLICOLOR=1
 alias la='ls -a'
 alias ll='la -lh'
 alias lt='ll -rt'
+alias larth='ls -larth'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias top='top -ocpu'
-alias ia="open $1 -a /Applications/iA\ Writer.app"
+alias ip="curl icanhazip.com"
+
+# top
+alias cpu='top -o cpu'
+alias mem='top -o rsize' # memory
 
 # Easier navigation
 alias ..="cd .."
@@ -61,13 +68,7 @@ alias ...="cd ../.."
 # Ruby
 alias ruby='ruby -w'
 
-# Prompt with GIT status
-function parse_git_dirty() {
-    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-
-function parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1$(parse_git_dirty)/"
-}
-
-PS1='[\[\e[1;34m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0;1m\] \[\e[1;35m\]\w\[\e[0m\]\[\e[1;31m\]$(parse_git_branch)\[\e[0m\]]\$ '
+# Grab our gitprompt
+if [ -f $HOME/.bash_gitprompt ]; then
+    . $HOME/.bash_gitprompt
+fi
