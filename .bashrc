@@ -39,7 +39,8 @@ export HISTIGNORE="ls:cd:cd -:pwd;exit:date:* --help"
 export LDFLAGS=-L/usr/local/opt/sqlite/lib
 export CPPFLAGS=-I/usr/local/opt/sqlite/include
 export JAVA_HOME=`/usr/libexec/java_home`
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:$PATH
+export NODE_PATH=/usr/local/lib/node
+export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Ruby
 export ri="--format ansi -T"
