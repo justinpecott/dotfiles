@@ -38,11 +38,13 @@ export HISTIGNORE="ls:cd:cd -:pwd;exit:date:* --help"
 # Dev environment
 export LDFLAGS=-L/usr/local/opt/sqlite/lib
 export CPPFLAGS=-I/usr/local/opt/sqlite/include
+export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=`/usr/libexec/java_home`
 export NODE_PATH=/usr/local/lib/node
-export PATH=$HOME/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Ruby
+export RBENV_VERSION='2.1.1'
 export ri="--format ansi -T"
 
 # Pretty colors
@@ -68,6 +70,9 @@ alias ...="cd ../.."
 
 # Ruby
 alias ruby='ruby -w'
+
+# postgres
+alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/log/postgres.log'
 
 # Grab our gitprompt
 if [ -f $HOME/.bash_gitprompt ]; then
