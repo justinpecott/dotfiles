@@ -40,7 +40,6 @@ export LDFLAGS=-L/usr/local/opt/sqlite/lib
 export CPPFLAGS=-I/usr/local/opt/sqlite/include
 export ARCHFLAGS="-arch x86_64"
 export JAVA_HOME=`/usr/libexec/java_home`
-export NODE_PATH=/usr/local/lib/node
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Ruby
