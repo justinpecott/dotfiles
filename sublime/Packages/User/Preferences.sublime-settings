@@ -6,13 +6,18 @@
 	"fade_fold_buttons": false,
 	"font_face": "Source Code Pro",
 	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown"
+	],
 	"rulers":
 	[
 		80
 	],
+	"soda_folder_icons": true,
 	"tab_size": 2,
 	"theme": "Soda Dark 3.sublime-theme",
-	"soda_folder_icons": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
