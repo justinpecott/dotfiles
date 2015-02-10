@@ -1,11 +1,12 @@
 [user]
-    name = Justin Pecott
-    email = justin@pecott.net
+	name = Justin Pecott
+	email = justin@pecott.net
 [color]
     ui = auto
 [core]
     quotepath = false
     editor = subl -n -w
+	excludesfile = /Users/justin/.gitignore_global
 [alias]
     br = branch -a
     st = status
@@ -40,3 +41,17 @@
     tool = Kaleidoscope
 [push]
 	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true

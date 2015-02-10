@@ -75,9 +75,6 @@ alias ...="cd ../.."
 # Ruby
 alias ruby='ruby -w'
 
-# postgres
-alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/log/postgres.log'
-
 # MySQL
 alias sql.start="mysql.server start"
 alias sql.stop="mysql.server stop"

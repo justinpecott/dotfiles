@@ -1,0 +1,26 @@
+// Install Package Manager: https://packagecontrol.io
+// Install Spacegray Theme from Package Manager: http://kkga.github.io/spacegray/ : Theme - Spacegray
+{
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"default_encoding": "UTF-8",
+	"font_face": "Source Code Pro",
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"spacegray_tabs_font_normal": true,
+	"spacegray_tabs_normal": true,
+	"spacegray_tabs_auto_width": true,
+	"spacegray_sidebar_font_normal": true,
+	"spacegray_sidebar_tree_normal": true
+}
