@@ -39,11 +39,16 @@ export HISTIGNORE="ls:cd:cd -:pwd;exit:date:* --help"
 export LDFLAGS=-L/usr/local/opt/sqlite/lib
 export CPPFLAGS=-I/usr/local/opt/sqlite/include
 export ARCHFLAGS="-arch x86_64"
-export JAVA_HOME=`/usr/libexec/java_home`
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export M2_HOME=$HOME/opt/maven
+export GRADLE_HOME=$HOME/opt/gradle
+export CATALINA_HOME=$HOME/opt/tomcat
+export TOMCAT_HOME=$CATALINA_HOME
+export ANT_HOME=$HOME/opt/ant
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH:$HOME/opt/arcanist/bin:$M2_HOME/bin:$CATALINA_HOME/bin:$ANT_HOME/bin:$GRADLE_HOME/bin
 
 # Ruby
-export RBENV_VERSION='2.1.1'
+export RBENV_VERSION='2.2.0'
 export ri="--format ansi -T"
 
 # Pretty colors
@@ -73,7 +78,33 @@ alias ruby='ruby -w'
 # postgres
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/log/postgres.log'
 
+# MySQL
+alias sql.start="mysql.server start"
+alias sql.stop="mysql.server stop"
+alias sql.status="mysql.server status"
+
+# Nginx
+# Conf: /usr/local/etc/nginx/nginx.conf
+alias web.start="nginx"
+alias web.stop="nginx -s stop"
+
+# Liquibase
+alias schema.up="mvn liquibase:update"
+alias schema.down="mvn liquibase:rollback -Dliquibase.rollbackCount=1"
+alias schema.status="mvn liquibase:status"
+alias schema.checksumclear="mvn liquibase:clearCheckSums"
+
+# Integration Tests
+alias int.test="mvn -Dskip.integration.tests=false install"
+
+# Logging Dir
+alias cd.log="cd /Users/justin/Library/Caches/IntelliJIdea13/tomcat/Unnamed_ensosync_2/logs"
+
 # Grab our gitprompt
 if [ -f $HOME/.bash_gitprompt ]; then
     . $HOME/.bash_gitprompt
 fi
+
+# CareFinder Pro
+export hostingEnvironment="staging"
+export testMode="off"
