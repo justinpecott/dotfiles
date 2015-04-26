@@ -1,12 +1,10 @@
 [user]
-	name = Justin Pecott
-	email = justin@pecott.net
-[color]
-    ui = auto
+    name = Justin Pecott
+    email = justin@pecott.net
 [core]
-    quotepath = false
+    quotepath = false # Outputs special characters as is rather than c source code quoted
     editor = subl -n -w
-	excludesfile = /Users/justin/.gitignore_global
+    excludesfile = /Users/justin/.gitignore_global
 [alias]
     br = branch -a
     st = status
@@ -22,16 +20,13 @@
     graph = log --pretty=oneline --abbrev-commit --graph --decorate=short --all
     graph2 = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset> %Cblue%ad%Creset [%Cgreen%an%Creset] %Cblue%s%Creset\" --all --date=short
     sync = !git pull --rebase && git push
-    gcap = gc --aggressive --prune
     scrub = !git reset --hard && git clean -fd
-    sealog = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[branch]
 [difftool "Kaleidoscope"]
     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-    prompt = false
 [diff]
     tool = Kaleidoscope
+[difftool]
+    prompt = false
 [mergetool "Kaleidoscope"]
     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustExitCode = true
@@ -40,18 +35,12 @@
 [merge]
     tool = Kaleidoscope
 [push]
-	default = simple
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+    default = simple
+[filter "media"] # Image Support
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+[filter "hawser"] # GitHub large file support
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
