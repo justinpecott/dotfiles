@@ -5,10 +5,12 @@ Zsh, Sublime, Vim, and Ruby, and Git are the daily drivers.
 Prefer the most current packages we can get so install [Homebrew](http://brew.sh)
 
 ``` Shell
-brew install zsh
 brew install git
 brew install wget
 brew install vim
+brew install zsh
+# Add /usr/local/bin/zsh to /etc/shells
+chsh -s /usr/local/bin/zsh
 ```
 
 ### Fonts
