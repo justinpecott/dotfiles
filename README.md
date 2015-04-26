@@ -9,7 +9,7 @@ brew install git
 brew install wget
 brew install vim
 brew install zsh
-# Add /usr/local/bin/zsh to /etc/shells
+# Add /usr/local/bin/zsh to /etc/shells then set your shell with the following
 chsh -s /usr/local/bin/zsh
 ```
 
