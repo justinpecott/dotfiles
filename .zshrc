@@ -21,8 +21,9 @@ export HISTFILE=$HOME/.zsh_history
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-# ENABLE OSX Colors
-export CLICOLOR=1
+# Enable Colors
+export CLICOLOR=1 # OSX
+#alias ls='ls --color=auto' # Linux
 
 # Basic Setup
 export EDITOR="subl -w"
