@@ -43,6 +43,12 @@ alias cpu='top -o cpu'
 alias mem='top -o rsize' # memory
 alias history='history 1'
 
+# Disable autocorrect for some commands
+alias scp='nocorrect scp '
+alias cp='nocorrect cp '
+alias mv='nocorrect mv '
+alias mkdir='nocorrect mkdir '
+
 # Ruby
 alias ruby='ruby -w'
 alias rake="noglob rake"
