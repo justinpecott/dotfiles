@@ -8,20 +8,20 @@ setopt complete_in_word # Allow completion from within a word/phrase
 setopt correct # spelling correction for commands
 
 # History
-setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
+setopt inc_append_history # Allow multiple terminal sessions to all append to one zsh command history
 setopt extended_history # save timestamp of command and duration
 setopt hist_expire_dups_first # when trimming history, lose oldest duplicates first
 setopt hist_ignore_dups # Do not write events to history that are duplicates of previous events
 setopt hist_reduce_blanks # Remove extra blanks from each command line being added to history
-export HISTSIZE=10000
-export SAVEHIST=9000
+export HISTSIZE=5000
+export SAVEHIST=10000
 export HISTFILE=$HOME/.zsh_history
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-# Enable Colors
+# ENABLE OSX Colors
 export CLICOLOR=1 # OSX
 #alias ls='ls --color=auto' # Linux
 
@@ -41,6 +41,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias cpu='top -o cpu'
 alias mem='top -o rsize' # memory
+alias history='history 1'
 
 # Ruby
 alias ruby='ruby -w'
