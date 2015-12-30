@@ -22,8 +22,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # ENABLE OSX Colors
-export CLICOLOR=1 # OSX
-#alias ls='ls --color=auto' # Linux
+export CLICOLOR=1
 
 # Basic Setup
 export EDITOR="subl -w"
@@ -43,12 +42,6 @@ alias cpu='top -o cpu'
 alias mem='top -o rsize' # memory
 alias history='history 1'
 
-# Disable autocorrect for some commands
-alias scp='nocorrect scp '
-alias cp='nocorrect cp '
-alias mv='nocorrect mv '
-alias mkdir='nocorrect mkdir '
-
 # Ruby
 alias ruby='ruby -w'
 alias rake="noglob rake"
@@ -61,21 +54,14 @@ eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export M2_HOME=$HOME/opt/maven
 export GRADLE_HOME=$HOME/opt/gradle
-export CATALINA_HOME=$HOME/opt/tomcat
-export TOMCAT_HOME=$CATALINA_HOME
 
 # Path
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$M2_HOME/bin:$CATALINA_HOME/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$M2_HOME/bin:$GRADLE_HOME/bin:$PATH
 
 # MySQL
 alias sql.start="mysql.server start"
 alias sql.stop="mysql.server stop"
 alias sql.status="mysql.server status"
-
-# Nginx
-# Conf: /usr/local/etc/nginx/nginx.conf
-alias web.start="nginx"
-alias web.stop="nginx -s stop"
 
 # Tab Completions
 autoload -U compinit
