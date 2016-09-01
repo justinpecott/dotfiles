@@ -63,6 +63,9 @@ alias sql.start="mysql.server start"
 alias sql.stop="mysql.server stop"
 alias sql.status="mysql.server status"
 
+# OSX
+alias killdups='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user;killall Finder;echo "Rebuilt Open With, relaunching Finder"'
+
 # Tab Completions
 autoload -U compinit
 compinit
