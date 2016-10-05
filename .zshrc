@@ -70,6 +70,9 @@ alias killdups='/System/Library/Frameworks/CoreServices.framework/Frameworks/Lau
 autoload -U compinit
 compinit
 
+# Brew
+export HOMEBREW_GITHUB_API_TOKEN=""
+
 # Pure Prompt
 fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit && promptinit
