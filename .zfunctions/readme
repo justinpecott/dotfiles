@@ -1,0 +1,2 @@
+ln -s pure.sh prompt_pure_setup
+ln -s async.sh async
