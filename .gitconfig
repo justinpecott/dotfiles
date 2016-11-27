@@ -3,37 +3,14 @@
     email = justin@pecott.net
 [core]
     quotepath = false # Outputs special characters as is rather than c source code quoted
-    editor = subl -n -w
-    excludesfile = /Users/justin/.gitignore_global
+    editor = vim
+    excludesfile = ~/.gitignore_global
 [alias]
     br = branch -a
     st = status
-    ci = commit
     co = checkout
-    l = log --stat -C -3
-    ll = log --stat -C
+    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     info = !echo "= REMOTES ====" && git remote -v && echo "= BRANCHES ===" && git branch -a && echo "= STATUS =====" && git status -s
-    d = diff --color-words
-    dh = diff HEAD
-    dc = diff --staged
-    who = shortlog -s --
-    graph = log --pretty=oneline --abbrev-commit --graph --decorate=short --all
-    graph2 = log --graph --date-order -C -M --pretty=format:\"<%Cred%h%Creset> %Cblue%ad%Creset [%Cgreen%an%Creset] %Cblue%s%Creset\" --all --date=short
-    sync = !git pull --rebase && git push
-    scrub = !git reset --hard && git clean -fd
-[difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-    tool = Kaleidoscope
-[difftool]
-    prompt = false
-[mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
-[mergetool]
-    prompt = false
-[merge]
-    tool = Kaleidoscope
 [push]
     default = simple
 [filter "media"] # Image Support
