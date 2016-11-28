@@ -1,4 +1,4 @@
-##  A Fairly Sane and Minimal Set of Config 
+##  A Fairly Sane and Minimal Set of Config
 Zsh, Sublime, Vim, and Ruby, and Git are the daily drivers.
 
 ### Homebrew
@@ -6,7 +6,6 @@ Prefer the most current packages we can get so install [Homebrew](http://brew.sh
 
 ``` Shell
 brew install git
-brew install wget
 brew install vim
 brew install zsh
 # Add /usr/local/bin/zsh to /etc/shells then set your shell with the following
@@ -28,7 +27,6 @@ I've found [rbenv](https://github.com/sstephenson/rbenv) to be the most straight
 ``` Shell
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
-rbenv install 2.2.0
-rbenv global 2.2.0
+rbenv install 2.2.6
+rbenv global 2.2.6
 ```
