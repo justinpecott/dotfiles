@@ -21,6 +21,7 @@
 	"spacegray_tabs_font_normal": true,
 	"spacegray_tabs_normal": true,
 	"spacegray_tabs_auto_width": true,
+	"spacegray_fileicons": true,
 	"spacegray_sidebar_font_normal": true,
 	"spacegray_sidebar_tree_normal": true
 }
