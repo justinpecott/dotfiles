@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "git.enabled": false,
+    "editor.minimap.enabled": true,
+    "editor.fontFamily": "Source Code Pro",
+    "workbench.iconTheme": "vs-seti",
+    "workbench.welcome.enabled": false
+}
