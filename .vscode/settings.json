@@ -4,5 +4,6 @@
     "editor.minimap.enabled": true,
     "editor.fontFamily": "Source Code Pro",
     "workbench.iconTheme": "vs-seti",
-    "workbench.welcome.enabled": false
+    "workbench.welcome.enabled": false,
+    "typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib"
 }
