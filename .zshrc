@@ -57,13 +57,13 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 alias ruby='ruby -w'
 alias rake="noglob rake"
 export ri="--format ansi -T"
-export RBENV_VERSION='2.2.6'
+export RBENV_VERSION='2.3.3'
 eval "$(rbenv init -)"
 
-# MySQL
-alias sql.start="mysql.server start"
-alias sql.stop="mysql.server stop"
-alias sql.status="mysql.server status"
+# PostgreSQL
+alias pg.start="pg_ctl -D /usr/local/var/postgres start"
+alias pg.stop="pg_ctl -D /usr/local/var/postgres stop"
+alias pg.status="pg_ctl -D /usr/local/var/postgres status"
 
 # Tab Completions
 autoload -U compinit
