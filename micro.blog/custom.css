@@ -1,0 +1,64 @@
+html {
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+a {
+  color: #599038;
+  border-bottom: 1px solid #ddd;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #599038;
+  border-bottom: 1px solid #599038;
+}
+
+.masthead-title a {
+  color: #599038;
+   text-decoration: none;
+}
+
+.masthead-title span {
+  display: none;
+}
+
+.masthead-title--small {
+  text-transform: none;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.masthead-title--small a {
+  color: #599038;
+}
+
+.masthead-nav {
+  display: none;
+}
+
+.list-item {
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.page-title {
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+
+.site-footer {
+  font-size: 0.8em;
+  color: #666
+}
+
+.site-footer a {
+  color: #599038
+}
