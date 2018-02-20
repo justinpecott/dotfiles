@@ -48,7 +48,7 @@ alias history='history 1'
 alias which='type -a'
 
 # Path
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
@@ -57,8 +57,10 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 alias ruby='ruby -w'
 alias rake="noglob rake"
 export ri="--format ansi -T"
-export RBENV_VERSION='2.3.3'
-eval "$(rbenv init -)"
+
+# Node
+alias ng='npm ls -g --depth=0'
+alias nl='npm ls --depth=0'
 
 # PostgreSQL
 alias pg.start="pg_ctl -D /usr/local/var/postgres start"
