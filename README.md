@@ -28,6 +28,7 @@ Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is ver
 ### Sublime Packages
 - [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
 - [Requester](https://packagecontrol.io/packages/Requester)
+- [SQLBeautifier](https://packagecontrol.io/packages/SqlBeautifier)
 - [TOML](https://packagecontrol.io/packages/TOML)
 - [VCS Gutter](https://packagecontrol.io/packages/VCS%20Gutter)
 
