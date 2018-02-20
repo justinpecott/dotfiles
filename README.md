@@ -1,32 +1,35 @@
 ##  A Fairly Sane and Minimal Set of Config
-Zsh, Sublime, Vim, and Ruby, and Git are the daily drivers.
 
 ### Homebrew
 Prefer the most current packages we can get so install [Homebrew](http://brew.sh)
 
 ``` Shell
+brew install awscli
+brew install aws-elasticbeanstalk
 brew install git
+brew install httpie
+brew install node
+brew install postgresql
+brew install python
+brew install python3
+brew install ruby
+brew install tmux
 brew install vim
+brew install yarn
 brew install zsh
 # Add /usr/local/bin/zsh to /etc/shells then set your shell with the following
 chsh -s /usr/local/bin/zsh
+brew install zsh-completions
 ```
 
 ### Fonts
 Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is very nice.
 
-### Sublime Text
-Use [Sublime Text 3](http://www.sublimetext.com/3) with the excellent minimal theme [Spacegray](http://kkga.github.io/spacegray/) installed via [Package Control](https://packagecontrol.io)
+### Sublime Packages
+- [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
+- [Requester](https://packagecontrol.io/packages/Requester)
+- [TOML](https://packagecontrol.io/packages/TOML)
+- [VCS Gutter](https://packagecontrol.io/packages/VCS%20Gutter)
 
 ### Zsh
 Awesome minimal prompt with git introspection courtesy of [Pure](https://github.com/sindresorhus/pure)
-
-### Ruby
-I've found [rbenv](https://github.com/sstephenson/rbenv) to be the most straightforward solution to handling versions. I prefer installing this manually to using Homebrew for whatever reason.
-
-``` Shell
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-rbenv install 2.2.6
-rbenv global 2.2.6
-```
