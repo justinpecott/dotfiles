@@ -26,11 +26,12 @@ brew install zsh-completions
 Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is very nice.
 
 ### Sublime Packages
-- [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
-- [Requester](https://packagecontrol.io/packages/Requester)
-- [SQLBeautifier](https://packagecontrol.io/packages/SqlBeautifier)
-- [TOML](https://packagecontrol.io/packages/TOML)
-- [VCS Gutter](https://packagecontrol.io/packages/VCS%20Gutter)
+- [Markdown Extended](https://github.com/jonschlinkert/sublime-markdown-extended)
+- [Pretty JSON](https://github.com/jonschlinkert/sublime-markdown-extended)
+- [Requester](https://github.com/kylebebak/Requester/)
+- [SQLBeautifier](https://github.com/zsong/SqlBeautifier)
+- [TOML](https://github.com/lmno/TOML)
+- [VCS Gutter](https://github.com/bradsokol/VcsGutter)
 
 ### Zsh
 Awesome minimal prompt with git introspection courtesy of [Pure](https://github.com/sindresorhus/pure)
