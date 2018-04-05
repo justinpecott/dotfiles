@@ -69,7 +69,7 @@ alias pg.stop="pg_ctl -D /usr/local/var/postgres stop"
 alias pg.status="pg_ctl -D /usr/local/var/postgres status"
 
 # Brew
-export HOMEBREW_GITHUB_API_TOKEN="fff250045a5e35c15ae8173d5ffbd9c997e0478f"
+export HOMEBREW_GITHUB_API_TOKEN="INSERT_TOKEN_HERE"
 alias brewdeps='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk ''{printf(" %s ", $0)}''; echo ""; done'
 
 # Tab Completions
