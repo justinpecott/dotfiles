@@ -8,6 +8,7 @@ setopt pushdtohome  # pushd without arguments does `pushd ~', like cd.
 setopt pushd_ignore_dups # don't push multiple copies of the same directory onto the directory stack
 setopt cdablevars # if the argument to cd is the name of a parameter whose value is a valid directory, it will become the current directory.
 setopt extendedglob # Enable extended globbing, do stuff like ls **/foosetopt
+setopt rcquotes # Escape ' with ''
 DIRSTACKSIZE=5 # Directory stack depth
 unsetopt nomatch # Pass * to command rather than error if no match, like bash
 
@@ -66,6 +67,10 @@ alias nl='npm ls --depth=0'
 alias pg.start="pg_ctl -D /usr/local/var/postgres start"
 alias pg.stop="pg_ctl -D /usr/local/var/postgres stop"
 alias pg.status="pg_ctl -D /usr/local/var/postgres status"
+
+# Brew
+export HOMEBREW_GITHUB_API_TOKEN="fff250045a5e35c15ae8173d5ffbd9c997e0478f"
+alias brewdeps='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk ''{printf(" %s ", $0)}''; echo ""; done'
 
 # Tab Completions
 autoload -U compinit
