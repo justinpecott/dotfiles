@@ -32,6 +32,13 @@ nav.main-nav a, #footer a, #post-nav a, .post-body a, p a {
 }
 
 /*
+Clear the 'follow me on micro.blog' sub-title
+*/
+.p-role {
+  display: none;
+}
+
+/*
 Monokai Code Theme
 */
 .highlight .hll { background-color: #49483e }
