@@ -1,8 +1,10 @@
 {
-    "editor.minimap.enabled": true,
-    "editor.fontFamily": "Source Code Pro",
-    "workbench.iconTheme": "vs-seti",
-    "editor.tabSize": 2,
-    "editor.detectIndentation": false,
-    "workbench.startupEditor": "newUntitledFile"
+  "editor.minimap.enabled": true,
+  "editor.fontFamily": "Source Code Pro",
+  "workbench.iconTheme": "vs-seti",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false
 }
