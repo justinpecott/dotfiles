@@ -1,0 +1,13 @@
+
+## Dynamo Get-Item
+```bash
+aws dynamodb get-item —table-name drumond-park-logo-game —key file://me.json —profile personal | jq
+```
+### me.json
+```json
+{
+  "id": {
+    "S": "amzn1.ask.account.AFFHYZD7D4NRQMBJ6YRMCHCQ53FCBTYFQAC7K5ZMOTSQG3RW674KSWABVQXCWAQ6ALKY5HC22DIWUAXOKMI7JRSCD2Y4JJPX27LU2QPVUZ3L32ZFICSAGP3WSQUHMXUDK4HLPMQ3WWHRWDTYAEYLDKDZ346ZRPHPYMKS46IUXCBLURYOMQJTI735EPCG3AFT653OWLACZSI47JY"
+  }
+}
+```
