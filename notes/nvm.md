@@ -1,4 +1,3 @@
-nvm
 ## Install or Update nvm
 ```bash
 # Using curl
