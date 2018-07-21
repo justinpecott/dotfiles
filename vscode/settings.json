@@ -5,6 +5,4 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "workbench.startupEditor": "newUntitledFile",
-  "git.confirmSync": false,
-  "explorer.confirmDelete": false
 }

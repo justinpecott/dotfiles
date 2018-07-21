@@ -1,18 +1,15 @@
-##  A Fairly Sane and Minimal Set of Config
+## A Fairly Sane and Minimal Set of Config
 
 ### Homebrew
+
 Prefer the most current packages we can get so install [Homebrew](http://brew.sh)
 
-``` Shell
+```Shell
 brew install awscli
-brew install aws-elasticbeanstalk
 brew install git
 brew install httpie
-brew install node
+brew install jq
 brew install postgresql
-brew install python
-brew install python3
-brew install ruby
 brew install tmux
 brew install vim
 brew install yarn
@@ -23,15 +20,18 @@ brew install zsh-completions
 ```
 
 ### Fonts
+
 Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is very nice.
 
-### Sublime Packages
-- [Markdown Extended](https://github.com/jonschlinkert/sublime-markdown-extended)
-- [Pretty JSON](https://github.com/jonschlinkert/sublime-markdown-extended)
-- [Requester](https://github.com/kylebebak/Requester/)
-- [SQLBeautifier](https://github.com/zsong/SqlBeautifier)
-- [TOML](https://github.com/lmno/TOML)
-- [VCS Gutter](https://github.com/bradsokol/VcsGutter)
+### VSCode Extensions
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 ### Zsh
+
 Awesome minimal prompt with git introspection courtesy of [Pure](https://github.com/sindresorhus/pure)
