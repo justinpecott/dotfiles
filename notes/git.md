@@ -10,4 +10,8 @@ git stash apply # pull everything back and leave it on the stack
 git stash pop # pull everything back and remove it from the stack
 git stash drop # clear the stack
 git stash branch branch_name # create a branch from a stash
+
+# Create, Push, Track New Branch
+git checkout -b feature_branch_name
+git push -u origin feature_branch_name
 ```

@@ -49,7 +49,7 @@ alias history='history 1'
 alias which='type -a'
 
 # Path
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
