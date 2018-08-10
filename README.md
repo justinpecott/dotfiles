@@ -10,9 +10,11 @@ brew install git
 brew install httpie
 brew install jq
 brew install postgresql
+brew install python2
+brew install python3
+brew install ruby
 brew install tmux
 brew install vim
-brew install yarn
 brew install zsh
 # Add /usr/local/bin/zsh to /etc/shells then set your shell with the following
 chsh -s /usr/local/bin/zsh
