@@ -21,6 +21,9 @@ chsh -s /usr/local/bin/zsh
 brew install zsh-completions
 ```
 
+### Node
+Install [NVM](https://github.com/creationix/nvm) - [Simplified Instructions](https://github.com/justinpecott/dotfiles/blob/master/notes/nvm.md)
+
 ### Fonts
 
 Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is very nice.
