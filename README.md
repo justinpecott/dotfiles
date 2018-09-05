@@ -6,12 +6,15 @@ Prefer the most current packages we can get so install [Homebrew](http://brew.sh
 
 ```Shell
 brew install awscli
+brwe install bat
+brew install fd
 brew install git
 brew install httpie
 brew install jq
 brew install postgresql
 brew install python2
 brew install python3
+brew install rg
 brew install ruby
 brew install tmux
 brew install vim
@@ -23,6 +26,12 @@ brew install zsh-completions
 
 ### Node
 Install [NVM](https://github.com/creationix/nvm) - [Simplified Instructions](https://github.com/justinpecott/dotfiles/blob/master/notes/nvm.md)
+
+### TLDR - Simplified Man Pages
+
+```Shell
+npm -g i tldr
+```
 
 ### Fonts
 
