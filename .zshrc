@@ -63,27 +63,21 @@ alias history='history 1'
 alias which='type -a'
 
 # Path
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-# Ruby
-alias ruby='ruby -w'
-alias rake="noglob rake"
-export ri="--format ansi -T"
+# Javascript
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Node
 alias ng='npm ls -g --depth=0'
 alias nl='npm ls --depth=0'
 
-# PostgreSQL
-alias pg.start="pg_ctl -D /usr/local/var/postgres start"
-alias pg.stop="pg_ctl -D /usr/local/var/postgres stop"
-alias pg.status="pg_ctl -D /usr/local/var/postgres status"
-
 # Brew
-export HOMEBREW_GITHUB_API_TOKEN=""
+export HOMEBREW_GITHUB_API_TOKEN=''
 alias brewdeps='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk ''{printf(" %s ", $0)}''; echo ""; done'
 
 # Tab Completions
@@ -95,6 +89,3 @@ fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit; promptinit
 prompt pure
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
