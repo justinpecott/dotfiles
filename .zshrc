@@ -68,6 +68,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# Ruby
+export PATH=/usr/local/opt/ruby/bin:$PATH
+
 # Javascript
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -85,7 +88,7 @@ autoload -U compinit
 compinit
 
 # Pure Prompt
-fpath=( "$HOME/.zfunctions" $fpath )
+fpath=( "$HOME/.zfunctions" "/usr/local/share/zsh-completions" $fpath )
 autoload -U promptinit; promptinit
 prompt pure
 
