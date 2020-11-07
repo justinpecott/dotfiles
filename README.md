@@ -7,45 +7,26 @@ Prefer the most current packages we can get so install [Homebrew](http://brew.sh
 ```Shell
 brew install awscli
 brwe install bat
+brew install caddy
 brew install fd
+brew install fish
 brew install git
 brew install httpie
+brew install hugo
 brew install jq
-brew install postgresql
-brew install python2
-brew install python3
-brew install rg
+brew install node
+brew install python
+brew install ripgrep
 brew install ruby
-brew install tmux
+brew install sqlite
 brew install vim
-brew install zsh
-# Add /usr/local/bin/zsh to /etc/shells then set your shell with the following
-chsh -s /usr/local/bin/zsh
-brew install zsh-completions
+brew install wget
+brew tap homebrew/cask-fonts
+brew install font-source-code-pro
 ```
 
-### Node
-Install [NVM](https://github.com/creationix/nvm) - [Simplified Instructions](https://github.com/justinpecott/dotfiles/blob/master/notes/nvm.md)
+### Shell
 
-### TLDR - Simplified Man Pages
-
-```Shell
-npm -g i tldr
-```
-
-### Fonts
-
-Adobe's [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is very nice.
-
-### VSCode Extensions
-
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
-- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
-
-### Zsh
-
-Awesome minimal prompt with git introspection courtesy of [Pure](https://github.com/sindresorhus/pure)
+[Fish](https://fishshell.com)
+Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
+[Tide Prompt](https://github.com/IlanCosman/tide) Configure to Pure
