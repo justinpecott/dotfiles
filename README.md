@@ -27,6 +27,6 @@ brew install font-source-code-pro
 
 ### Shell
 
-[Fish](https://fishshell.com)
-Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
-[Tide Prompt](https://github.com/IlanCosman/tide) Configure to Pure
+* [Fish](https://fishshell.com)
+* Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
+* [Tide Prompt](https://github.com/IlanCosman/tide) Configure to Pure
