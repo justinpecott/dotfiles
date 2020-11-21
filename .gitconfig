@@ -25,3 +25,9 @@
     required = true
 [pager]
 	branch = false
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
