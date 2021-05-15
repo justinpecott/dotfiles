@@ -10,6 +10,7 @@ brwe install bat
 brew install fd
 brew install fish
 brew install git
+brew install goaccess
 brew install httpie
 brew install hugo
 brew install jq
