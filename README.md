@@ -28,14 +28,14 @@ brew install vim
 * [Pure Prompt](https://github.com/pure-fish/pure)
 
 ### Font
-[JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+[MonoLisa Regular](https://www.monolisa.dev)
 
 Don't forget to turn on ligatures in editors where needed.
 
 ```json
 {
-    "editor.fontFamily": "JetBrains Mono",
-    "editor.fontSize": 13,
+    "editor.fontFamily": "MonoLisa Regular",
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
 }
 ```
