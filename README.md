@@ -6,7 +6,7 @@ Prefer the most current packages we can get so install [Homebrew](http://brew.sh
 
 ```Shell
 brew install awscli
-brwe install bat
+brew install bat
 brew install fd
 brew install fish
 brew install git
@@ -17,9 +17,8 @@ brew install jq
 brew install node
 brew install python
 brew install ripgrep
+brew install ruby
 brew install vim
-brew tap homebrew/cask-fonts
-brew install font-source-code-pro
 ```
 
 ### Shell
@@ -27,3 +26,16 @@ brew install font-source-code-pro
 * [Fish](https://fishshell.com)
 * Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
 * [Pure Prompt](https://github.com/pure-fish/pure)
+
+### Font
+[JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
+Don't forget to turn on ligatures in editors where needed.
+
+```json
+{
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+}
+```
