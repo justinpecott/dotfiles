@@ -1,6 +1,9 @@
 [user]
     name = Justin Pecott
     email = justin@pecott.net
+# Conditionally change username and email - http://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities
+#[includeIf "gitdir:~/Code/amazon/"]
+#    path = ~/.gitconfig-work
 [core]
     quotepath = false # Outputs special characters as is rather than c source code quoted
     editor = vim
