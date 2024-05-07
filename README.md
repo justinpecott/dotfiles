@@ -15,12 +15,19 @@ brew install node
 brew install python
 brew install ripgrep
 brew install ruby
+brew install zsh
+brew install pure
 ## pyenv
 brew install pyenv
 brew install openssl readline sqlite3 xz zlib
 ```
 
-### Shell
+### ZSH
+
+- Install via Homebrew above
+- Install pure prompt from Homebrew above
+
+### Fish Shell (Not Using ATM)
 
 - [Fish](https://fishshell.com)
 - Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
@@ -40,10 +47,6 @@ Don't forget to turn on ligatures in editors where needed.
 }
 ```
 
-### Editor Theme
-
-- [Monokai Pro](https://monokai.pro)
-
 ### Get a consistent Python via pyenv
 
 - [Installation Instructions](https://github.com/pyenv/pyenv#installation)
@@ -56,4 +59,17 @@ pyenv install 3.10.2
 pyenv version
 pyenv versions
 pyenv global 3.10.2
+```
+
+### Get a consistent Node via nvm
+
+- [Installation Instructions](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+```
+nvm ls-remote
+nvm install --lts
+nvm ls
+nvm use system
+nvm use lts/*
+nvm alias default lts/*
 ```
