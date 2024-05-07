@@ -48,8 +48,10 @@ alias which='type -a'
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Brew
-export HOMEBREW_GITHUB_API_TOKEN=''
-alias brewdeps='brew list | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk ''{printf(" %s ", $0)}''; echo ""; done'
+# https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
+alias brewdeps='brew deps --tree $(brew leaves)'
+alias brewdepsfull='brew deps --tree --installed'
+alias brewcleanup='brew autoremove'
 
 # Pyenv
 # https://github.com/pyenv/pyenv
