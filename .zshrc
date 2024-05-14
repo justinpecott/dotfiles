@@ -45,7 +45,7 @@ alias history='history -i'
 alias which='type -a'
 
 # Path
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.toolbox/bin:/usr/local/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
@@ -69,3 +69,55 @@ export NVM_DIR="$HOME/.nvm"
 # Installed via brew
 autoload -U promptinit; promptinit
 prompt pure
+
+# Encode skill for IOTA
+tob64 () {
+  echo -n "{\"skillId\":\"$1\",\"stage\":\"$2\"}" | base64 | xargs echo
+}
+
+# Decode skill from IOTA
+fromb64 () {
+  echo -n $1 | base64 --decode | xargs echo
+}
+
+# Decode many skills from IOTA
+multib64 () {
+	while IFS="" read -r p || [ -n "$p" ]
+	do
+		  echo -n "{\"skillId\":\"$p\",\"stage\":\"live\"}" | base64 | xargs echo
+	done < $1
+}
+
+# Get a CID from a unit
+getcid() {
+	echo sudo sudo -u aspops /apollo/bin/env -e AlexaSPOpsTools /apollo/env/AlexaSPOpsTools/bin/asp hospital unit-cid --domain=prod --realm=USAmazon --root=/apollo/env/AlexaSPOpsTools/ --unitId=$argv[1] | ssh alexa-sp-ops-tools-prod-0-1a-cb0d67eb.us-east-1.amazon.com < /dev/fd/0
+}
+
+getunit() {
+	echo sudo sudo -u aspops /apollo/bin/env -e AlexaSPOpsTools /apollo/env/AlexaSPOpsTools/bin/asp hospital unit-id --domain=prod --realm=USAmazon --root=/apollo/env/AlexaSPOpsTools/ --unit-cid=$argv[1] | ssh alexa-sp-ops-tools-prod-0-1a-cb0d67eb.us-east-1.amazon.com < /dev/fd/0
+}
+
+unmask() {
+	case $argv[1] in
+	na)
+		OUTPUT=$(echo sudo -u deeadmin /apollo/env/IotaOpsTools/bin/SensitiveDataUnMasker -e \'$argv[2]\' | ssh phx-op2l-na-p-1d-627c3f31.us-east-1.amazon.com < /dev/fd/0)
+		echo "$OUTPUT" | tail -n1 | jq .
+		# jq failed so just output the last line
+		test $? -eq 0 || echo "$OUTPUT" | tail -n1
+		;;
+	eu)
+		OUTPUT=$(echo sudo -u smrthome /apollo/env/IotaOpsTools/bin/SensitiveDataUnMasker -e \'$argv[2]\' | ssh opstools-eu-p-1a-r6il-36b6ea3f.eu-west-1.amazon.com < /dev/fd/0)
+		echo "$OUTPUT" | tail -n1 | jq .
+		# jq failed so just output the last line
+		test $? -eq 0 || echo "$OUTPUT" | tail -n1
+		;;
+	fe)
+		OUTPUT=$(echo sudo -u smrthome /apollo/env/IotaOpsTools/bin/SensitiveDataUnMasker -e \'$argv[2]\' | ssh opstools-fe-p-2a-0b39eb62.us-west-2.amazon.com < /dev/fd/0)
+		echo "$OUTPUT" | tail -n1 | jq .
+		# jq failed so just output the last line
+		test $? -eq 0 || echo "$OUTPUT" | tail -n1
+		;;
+	*)
+		echo "Invalid Region!";;
+	esac	
+}
