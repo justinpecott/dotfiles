@@ -4,22 +4,19 @@
 
 Prefer the most current packages we can get so install [Homebrew](http://brew.sh)
 
-```Shell
+```shell
 brew install awscli
 brew install bat
 brew install dos2unix
-brew install fish
 brew install git
 brew install jq
-brew install node
-brew install python
 brew install ripgrep
-brew install ruby
 brew install zsh
 brew install pure
-## pyenv
+brew install sqlite3
 brew install pyenv
-brew install openssl readline sqlite3 xz zlib
+brew install wcurl
+brew install wget
 ```
 
 ### ZSH
@@ -27,11 +24,9 @@ brew install openssl readline sqlite3 xz zlib
 - Install via Homebrew above
 - Install pure prompt from Homebrew above
 
-### Fish Shell (Not Using ATM)
-
-- [Fish](https://fishshell.com)
-- Plugins Installed via [Fisher](https://github.com/jorgebucaran/fisher)
-- [Pure Prompt](https://github.com/pure-fish/pure)
+```shell
+sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells" && chsh -s /opt/homebrew/bin/zsh
+```
 
 ### Font
 
@@ -66,6 +61,7 @@ pyenv global 3.10.2
 - [Installation Instructions](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
 ```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm ls-remote
 nvm install --lts
 nvm ls
