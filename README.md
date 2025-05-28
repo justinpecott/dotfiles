@@ -40,7 +40,7 @@ Don't forget to turn on ligatures in editors where needed.
 }
 ```
 
-### Get a consistent Python via pyenv
+### Get a consistent Python via UV
 
 - [Documentation](https://docs.astral.sh/uv/)
 
