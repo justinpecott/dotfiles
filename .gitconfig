@@ -17,7 +17,8 @@
     undo = reset HEAD~1 --mixed
     amend = commit -a --amend
 [push]
-    default = simple
+	default = current
+	autoSetupRemote = true
 [filter "media"] # Image Support
     required = true
     clean = git media clean %f
@@ -48,3 +49,5 @@
 	prompt = false
 [init]
 	defaultBranch = main
+[branch]
+	autosetupmerge = always
