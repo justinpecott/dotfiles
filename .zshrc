@@ -55,6 +55,7 @@ alias brewcleanup='brew autoremove'
 
 # Node via fnm
 # eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
+# export NODE_PATH=$NODE_PATH:`npm root -g`
 # MOVED to .zprofile for Nova/prettier use
 
 # Pure Prompt
