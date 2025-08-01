@@ -45,7 +45,7 @@ alias history='history -i'
 alias which='type -a'
 
 # Path
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
