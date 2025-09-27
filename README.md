@@ -64,4 +64,7 @@ fnm --version
 fnm list-remote
 fnm install lts/Jod
 fnm list
+fnm default v22.20.0
+fnm current
+fnm uninstall v22.17.0
 ```
