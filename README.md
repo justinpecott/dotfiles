@@ -14,7 +14,7 @@ $ brew install pure
 $ brew install sqlite3
 $ brew install ruff
 $ brew install uv
-$ brew install fnm
+$ brew install node
 ```
 
 ### ZSH
@@ -105,20 +105,4 @@ $ uvx ruff format main.py
 # Lock is specific vs requirements for ranges/legacy
 # Create a requirements.txt from a uv.lock
 $ uv export -o requirements.txt
-```
-
-### Get a consistent Node via fnm
-
--   [Documentatiopn](https://github.com/Schniz/fnm)
--   [Usage](https://github.com/Schniz/fnm/blob/master/docs/commands.md)
-
-```shell
-brew install fnm
-fnm --version
-fnm list-remote
-fnm install lts/Jod
-fnm list
-fnm default v22.20.0
-fnm current
-fnm uninstall v22.17.0
 ```

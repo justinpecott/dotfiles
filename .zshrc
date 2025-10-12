@@ -45,7 +45,7 @@ alias history='history -i'
 alias which='type -a'
 
 # Path
-export PATH=/usr/local/bin:$HOME/.local/share/uv/python/cpython-3.13.2-macos-aarch64-none/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
@@ -53,15 +53,13 @@ alias brewdeps='brew deps --tree $(brew leaves)'
 alias brewdepsfull='brew deps --tree --installed'
 alias brewcleanup='brew autoremove'
 
-# Node via fnm
-# eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
-# export NODE_PATH=$NODE_PATH:`npm root -g`
-# MOVED to .zprofile for Nova/prettier use
+# Bring in the robots
+alias claude="/Users/justin/.claude/local/claude"
+source ~/.anthropic_api_key
+source ~/.openai_api_key
 
 # Pure Prompt
 # https://github.com/sindresorhus/pure
 # Installed via brew
 autoload -U promptinit; promptinit
 prompt pure
-
-alias claude="/Users/justin/.claude/local/claude"
