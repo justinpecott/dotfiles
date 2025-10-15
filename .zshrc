@@ -17,11 +17,11 @@ export HIST_STAMPS="yyyy-mm-dd"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
+export LANG="en_US.UTF-8"
 
-# Enable colors
-autoload -U colors
-colors
+# Enable colors and completions
+autoload -U colors && colors
+autoload -Uz compinit && compinit
 export CLICOLOR=1
 
 # Basic Setup
@@ -31,7 +31,7 @@ export PAGER='less'
 export LESS=-Ri
 
 # Enable color in grep
-export GREP_OPTIONS='--color=auto'
+alias grep='grep --color=auto'
 export GREP_COLOR='1;91'
 
 # General aliases
@@ -45,7 +45,7 @@ alias history='history -i'
 alias which='type -a'
 
 # Path
-export PATH=/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
