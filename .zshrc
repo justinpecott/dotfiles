@@ -49,17 +49,24 @@ export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
-alias brewdeps='brew deps --tree $(brew leaves)'
-alias brewdepsfull='brew deps --tree --installed'
-alias brewcleanup='brew autoremove'
+if (( $+commands[brew] )); then
+  alias brewdeps='brew deps --tree $(brew leaves)'
+  alias brewdepsfull='brew deps --tree --installed'
+  alias brewcleanup='brew autoremove'
+fi
 
 # Bring in the robots
-alias claude="/Users/justin/.claude/local/claude"
-source ~/.anthropic_api_key
-source ~/.openai_api_key
+if [[ -x /Users/justin/.claude/local/claude ]]; then
+  alias claude="/Users/justin/.claude/local/claude"
+fi
+
+[[ -f ~/.anthropic_api_key ]] && source ~/.anthropic_api_key
+[[ -f ~/.openai_api_key ]] && source ~/.openai_api_key
 
 # Pure Prompt
 # https://github.com/sindresorhus/pure
 # Installed via brew
-autoload -U promptinit; promptinit
-prompt pure
+autoload -U promptinit && promptinit
+if prompt -l 2>/dev/null | grep -qx pure; then
+  prompt pure
+fi
