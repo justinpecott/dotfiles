@@ -16,6 +16,12 @@ set backup                     " keep a backup while writing files
 set writebackup                " safer writes in case of interruption
 set swapfile                   " enable swap for crash recovery
 set undofile                   " persistent undo across sessions
+set backupdir=~/.vim/tmp//,/tmp// " keep backup files out of project dirs
+set directory=~/.vim/tmp//,/tmp// " keep swap files out of project dirs
+set undodir=~/.vim/tmp//,/tmp//   " keep undo files out of project dirs
+if !isdirectory(expand('~/.vim/tmp'))
+  call mkdir(expand('~/.vim/tmp'), 'p')
+endif
 set number                     " show line numbers
 set hidden                     " allow switching buffers with unsaved changes
 
