@@ -22,6 +22,9 @@ export LANG="en_US.UTF-8"
 # Enable colors and completions
 autoload -U colors && colors
 autoload -Uz compinit && compinit
+if (( $+commands[zed] )) && (( $+functions[compdef] )); then
+  compdef _gnu_generic zed
+fi
 export CLICOLOR=1
 
 # Basic Setup
