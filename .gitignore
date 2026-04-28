@@ -18,6 +18,10 @@ Icon
 .zed/
 *.sublime-workspace
 
+# Zed: keep only portable settings tracked
+zed/*
+!zed/settings.json
+
 # Vim local state and swap/backup files
 .vim/.netrwhist
 *.swp
