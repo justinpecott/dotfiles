@@ -10,9 +10,8 @@ This repo holds the personal defaults I use across my machines.
 - `~/.gitignore_global` – global git ignore patterns
 - `~/.vimrc` + `.vim/colors/jellybeans.vim` – Vim config and colorscheme
 - `sublime/Preferences.sublime-settings` – Sublime Text preferences
+- `zed/settings.json` – Zed editor preferences
 - `terminal/justinpecott.terminal` – exported macOS Terminal profile
-
-> This repo is intentionally **zsh-only** now (no fish config).
 
 ---
 
@@ -99,6 +98,7 @@ uv sync
 
 - `pure` prompt is expected in zsh (`prompt pure` in `.zshrc`).
 - Homebrew shell environment is loaded in `.zprofile` when brew exists.
+- Zed preferences are tracked in `zed/settings.json`.
 - Repository `.gitignore` contains local machine/editor junk and sensitive patterns.
 
 Keep it simple, keep it portable.
