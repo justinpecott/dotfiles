@@ -1,108 +1,104 @@
-## A Fairly Sane and Minimal Set of Config
+## Dotfiles (zsh-first, minimal, macOS-focused)
+
+This repo holds the personal defaults I use across my machines.
+
+### What’s included
+
+- `~/.zshrc` – interactive shell behavior, aliases, history, prompt
+- `~/.zprofile` – login-shell setup (Homebrew environment)
+- `~/.gitconfig` + `~/.gitconfig-work` – git defaults and work identity override
+- `~/.gitignore_global` – global git ignore patterns
+- `~/.vimrc` + `.vim/colors/jellybeans.vim` – Vim config and colorscheme
+- `sublime/Preferences.sublime-settings` – Sublime Text preferences
+- `terminal/justinpecott.terminal` – exported macOS Terminal profile
+
+> This repo is intentionally **zsh-only** now (no fish config).
+
+---
+
+## Prerequisites
 
 ### Homebrew
 
-Prefer the most current packages we can get so install [Homebrew](http://brew.sh)
+Install Homebrew first: <http://brew.sh>
 
-```shell
-$ brew install bat
-$ brew install git
-$ brew install jq
-$ brew install ripgrep
-$ brew install zsh
-$ brew install pure
-$ brew install sqlite3
-$ brew install ruff
-$ brew install uv
-$ brew install node
+Then install core tools:
+
+```sh
+brew install bat git jq ripgrep zsh pure sqlite3 ruff uv node
 ```
 
-### ZSH
+### zsh
 
--   Install via Homebrew above
--   Install pure prompt from Homebrew above
+Set Homebrew zsh as your default shell:
 
-```shell
-$ sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells" && chsh -s /opt/homebrew/bin/zsh
+```sh
+sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells" && chsh -s /opt/homebrew/bin/zsh
 ```
 
 ### Font
 
-[MonoLisa Regular](https://www.monolisa.dev)
+I use [MonoLisa Regular](https://www.monolisa.dev) with ligatures enabled where supported.
 
-Don't forget to turn on ligatures in editors where needed.
+Example editor settings:
 
 ```json
 {
-    "editor.fontFamily": "MonoLisa Regular",
-    "editor.fontSize": 12,
-    "editor.fontLigatures": true
+  "editor.fontFamily": "MonoLisa Regular",
+  "editor.fontSize": 12,
+  "editor.fontLigatures": true
 }
 ```
 
-### Get a consistent Python via UV
+---
 
--   [Documentation](https://docs.astral.sh/uv/)
+## Local secrets and machine-specific files
 
-```shell
-# Install
-$ brew install uv
-$ uv self version
+This repo keeps sensitive/local values out of version control.
 
-# Initialize a script
-# Creates a single file with inline dependencies in # /// script
-uv init --script my-script.py
+### Optional local files sourced by `~/.zshrc`
 
-# Initialize a project
-# Use --bare for a minimal setup (script and pyproject.toml)
-$ uv init explore-uv
-$ cd explore-uv
-$ tree -a
-.
-├── .git
-├── .gitignore
-├── .python-version
-├── README.md
-├── main.py
-└── pyproject.toml
+If present, these are loaded:
 
-# Add dependencies
-# A new virtual environment will be created if one doesn't exist at .venv
-# Use
-$ uv add scikit-learn xgboost
-$ uv add --dev flask
-$ uv add pandas --optional plot excel
+- `~/.anthropic_api_key`
+- `~/.openai_api_key`
 
-# Remove dependency
-$ uv remove scikit-learn
+Create them locally if needed, for example:
 
-# Execute Script
-# Ensures the virtual environment is used
-# Can also execute normally after activating .venv
-$ uv run main.py
-
-# Install Dependencies
-# Creates and/or updates .venv based on pyproject.toml and uv.lock
-$ uv sync
-$ uv sync --no-dev
-
-# Manage Versions
-# Most commands allow a specific version with --python 3.13.8
-$ uv python list --only-installed
-$ uv python install 3.14
-
-# Set version for a directory. Creates .python-version
-$ uv pin 3.14.0
-$ uv pin --global 3.14.0
-
-# Using tools
-# Command line tools like ruff, black, pytest, mypy
-# uvx is alias for uv tool run
-$ uv tool run ruff check main.py
-$ uvx ruff format main.py
-
-# uv.lock vs requirements.txt
-# Lock is specific vs requirements for ranges/legacy
-# Create a requirements.txt from a uv.lock
-$ uv export -o requirements.txt
+```sh
+export ANTHROPIC_API_KEY="..."
 ```
+
+```sh
+export OPENAI_API_KEY="..."
+```
+
+Do **not** commit credentials.
+
+---
+
+## Python workflow (uv)
+
+- Docs: <https://docs.astral.sh/uv/>
+
+Quick examples:
+
+```sh
+brew install uv
+uv self version
+uv init my-project
+cd my-project
+uv add ruff
+uv run main.py
+uv sync
+```
+
+---
+
+## Notes
+
+- `pure` prompt is expected in zsh (`prompt pure` in `.zshrc`).
+- Homebrew shell environment is loaded in `.zprofile` when brew exists.
+- Repository `.gitignore` contains local machine/editor junk and sensitive patterns.
+
+Keep it simple, keep it portable.
