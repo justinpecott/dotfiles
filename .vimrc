@@ -9,11 +9,15 @@ set nocursorline               " fix speed issues, don't highlight the current l
 set lazyredraw                 " redraw only when we need to
 set showmatch                  " highlight matching [{()}]
 set incsearch                  " search as characters are entered
+set ignorecase                 " case-insensitive search by default
+set smartcase                  " but case-sensitive when using uppercase
 set hlsearch                   " highlight matches
-set nobackup                   " not bothering with ~ files
-set nowritebackup              " not bothering with ~ files
-set noswapfile                 " not bothering with ~ files
+set backup                     " keep a backup while writing files
+set writebackup                " safer writes in case of interruption
+set swapfile                   " enable swap for crash recovery
+set undofile                   " persistent undo across sessions
 set number                     " show line numbers
+set hidden                     " allow switching buffers with unsaved changes
 
 
 "
@@ -22,8 +26,11 @@ set number                     " show line numbers
 "
 
 " status bar colors
-au InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
-au InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
+augroup JustinStatusline
+  autocmd!
+  autocmd InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
+  autocmd InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
+augroup END
 hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 
 " Status line
@@ -63,7 +70,7 @@ set statusline+=%3*│                                     " Separator
 set statusline+=%2*\ %{''.(&fenc!=''?&fenc:&enc).''}     " Encoding
 set statusline+=\ (%{&ff})                               " FileFormat (dos/unix..)
 set statusline+=%=                                       " Right Side
-set statusline+=%2*\ col:\ %02v\                         " Colomn number
+set statusline+=%2*\ col:\ %02v\                         " Column number
 set statusline+=%3*│                                     " Separator
 set statusline+=%1*\ ln:\ %02l/%L\ (%3p%%)\              " Line number / total lines, percentage of document
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\  " The current mode
