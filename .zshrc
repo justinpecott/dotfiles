@@ -55,6 +55,9 @@ if (( $+commands[brew] )); then
   alias brewcleanup='brew autoremove'
 fi
 
+# Snowflake
+alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+
 # Bring in the robots
 if [[ -x /Users/justin/.claude/local/claude ]]; then
   alias claude="/Users/justin/.claude/local/claude"
@@ -62,6 +65,7 @@ fi
 
 [[ -f ~/.anthropic_api_key ]] && source ~/.anthropic_api_key
 [[ -f ~/.openai_api_key ]] && source ~/.openai_api_key
+[[ -f ~/.kagi_api_key ]] && source ~/.kagi_api_key
 
 # Pure Prompt
 # https://github.com/sindresorhus/pure
