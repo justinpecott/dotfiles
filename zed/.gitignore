@@ -1,0 +1,7 @@
+# Keep only portable Zed settings tracked in this repo.
+# Ignore everything in this directory by default...
+*
+
+# ...but keep this ignore file and your portable settings.
+!.gitignore
+!settings.json
