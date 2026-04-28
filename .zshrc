@@ -71,6 +71,6 @@ fi
 # https://github.com/sindresorhus/pure
 # Installed via brew
 autoload -U promptinit && promptinit
-if prompt -l 2>/dev/null | grep -qx pure; then
+if prompt -l 2>/dev/null | tr ' ' '\n' | grep -qx 'pure'; then
   prompt pure
 fi
