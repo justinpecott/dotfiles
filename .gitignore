@@ -1,0 +1,39 @@
+# Repository-local ignore rules for machine/editor junk
+
+# macOS filesystem cruft
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.apdisk
+Icon
+
+# Editor/IDE local state
+.vscode/
+.idea/
+.nova/
+.zed/
+*.sublime-workspace
+
+# Vim local state and swap/backup files
+.vim/.netrwhist
+*.swp
+*.swo
+*~
+
+# Temp/log files
+*.log
+*.tmp
+*.bak
+
+# Local env/secrets (keep out of git)
+.env
+.env.local
+.env.*.local
+.direnv/
+
+# Machine-specific network config
+pi/wpa_supplicant.conf
