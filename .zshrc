@@ -9,11 +9,10 @@ setopt HIST_VERIFY           # Do not execute immediately upon history expansion
 setopt APPEND_HISTORY        # append to history file (Default)
 setopt HIST_NO_STORE         # Don't store history commands
 setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line being added to the history.
-export HISTSIZE=4096
-export SAVEHIST=4096
+export HISTSIZE=50000
+export SAVEHIST=50000
 export HISTFILE=$HOME/.zsh_history
-export HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
-export HIST_STAMPS="yyyy-mm-dd"
+export HISTORY_IGNORE="(ls|cd|pwd|exit)*"
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
@@ -73,8 +72,8 @@ if [[ -x /Applications/SnowSQL.app/Contents/MacOS/snowsql ]]; then
 fi
 
 # Bring in the robots
-if [[ -x /Users/justin/.claude/local/claude ]]; then
-  alias claude="/Users/justin/.claude/local/claude"
+if [[ -x "$HOME/.claude/local/claude" ]]; then
+  alias claude="$HOME/.claude/local/claude"
 fi
 
 #[[ -f ~/.anthropic_api_key ]] && source ~/.anthropic_api_key
