@@ -68,7 +68,9 @@ if (( $+commands[brew] )); then
 fi
 
 # Snowflake
-alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/snowsql
+if [[ -x /Applications/SnowSQL.app/Contents/MacOS/snowsql ]]; then
+  alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/snowsql'
+fi
 
 # Bring in the robots
 if [[ -x /Users/justin/.claude/local/claude ]]; then
