@@ -12,7 +12,6 @@ This repo holds the personal defaults I use across my machines.
 - `sublime/Preferences.sublime-settings` – Sublime Text preferences
 - `zed/settings.json` – Zed editor preferences
 - `ghostty/config.ghostty` – Ghostty terminal preferences
-- `terminal/justinpecott.terminal` – exported macOS Terminal profile
 
 ---
 
