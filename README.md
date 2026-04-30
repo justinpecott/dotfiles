@@ -24,7 +24,8 @@ Install Homebrew first: <http://brew.sh>
 Then install core tools:
 
 ```sh
-brew install bat git jq ripgrep zsh pure sqlite3 ruff uv node
+brew install bat duckdb gh git jq node pure ripgrep ruff sqlite tree uv wget zsh
+brew install --cask snowflake-snowsql
 ```
 
 ### zsh
@@ -43,7 +44,7 @@ Example editor settings:
 
 ```json
 {
-  "editor.fontFamily": "MonoLisa Regular",
+  "editor.fontFamily": "MonoLisa Variable",
   "editor.fontSize": 12,
   "editor.fontLigatures": true
 }
