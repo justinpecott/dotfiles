@@ -8,9 +8,10 @@ This repo holds the personal defaults I use across my machines.
 - `~/.zprofile` – login-shell setup (Homebrew environment)
 - `~/.gitconfig` + `~/.gitconfig-work` – git defaults and work identity override
 - `~/.gitignore_global` – global git ignore patterns
-- `~/.vimrc` + `.vim/colors/jellybeans.vim` – Vim config and colorscheme
+- `~/.vimrc` + `.vim/colors/onedark.vim` – Vim config and colorscheme
 - `sublime/Preferences.sublime-settings` – Sublime Text preferences
 - `zed/settings.json` – Zed editor preferences
+- `ghostty/config.ghostty` – Ghostty terminal preferences
 - `terminal/justinpecott.terminal` – exported macOS Terminal profile
 
 ---
@@ -37,7 +38,7 @@ sudo sh -c "echo /opt/homebrew/bin/zsh >> /etc/shells" && chsh -s /opt/homebrew/
 
 ### Font
 
-I use [MonoLisa Regular](https://www.monolisa.dev) with ligatures enabled where supported.
+I use [MonoLisa Variable](https://www.monolisa.dev) with ligatures enabled where supported.
 
 Example editor settings:
 
@@ -55,12 +56,15 @@ Example editor settings:
 
 This repo keeps sensitive/local values out of version control.
 
-### Optional local files sourced by `~/.zshrc`
+### Optional local files for secrets
 
-If present, these are loaded:
+`~/.zshrc` includes optional local secret file hooks, currently commented out by default:
 
 - `~/.anthropic_api_key`
 - `~/.openai_api_key`
+- `~/.kagi_api_key`
+
+Uncomment any that you want to auto-load.
 
 Create them locally if needed, for example:
 
@@ -99,6 +103,7 @@ uv sync
 - `pure` prompt is expected in zsh (`prompt pure` in `.zshrc`).
 - Homebrew shell environment is loaded in `.zprofile` when brew exists.
 - Zed preferences are tracked in `zed/settings.json`.
+- Ghostty preferences are tracked in `ghostty/config.ghostty`.
 - Repository `.gitignore` contains local machine/editor junk and sensitive patterns.
 
 Keep it simple, keep it portable.
