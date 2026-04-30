@@ -1,0 +1,27 @@
+# Theme
+theme = Atom One Dark
+
+# Contrast
+minimum-contrast = 1
+
+# Font
+font-family = MonoLisa Variable
+font-size = 14
+font-thicken = true
+font-thicken-strength = 150
+
+# Window
+macos-titlebar-style = tabs
+window-padding-x = 8
+window-padding-y = 4
+background-opacity = 0.96
+background-blur = macos-glass-clear
+window-padding-balance = true
+background-opacity-cells = true
+
+# Cursor
+cursor-style = bar
+adjust-cursor-thickness = 2
+
+# Mouse
+mouse-hide-while-typing = true
