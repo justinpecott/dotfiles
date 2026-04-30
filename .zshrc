@@ -44,8 +44,17 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias path='echo $PATH | tr -s ":" "\n"' # pretty print the path
-alias history='history -i'
+alias h='history 1'
 alias which='type -a'
+
+# Search shell history: hs <pattern>
+hs() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: hs <pattern>"
+    return 1
+  fi
+  history 1 | grep -i -- "$1"
+}
 
 # Path
 export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
