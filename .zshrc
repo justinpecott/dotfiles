@@ -67,14 +67,14 @@ if (( $+commands[brew] )); then
 fi
 
 # Snowflake
-if [[ -x /Applications/SnowSQL.app/Contents/MacOS/snowsql ]]; then
-  alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/snowsql'
-fi
+# if [[ -x /Applications/SnowSQL.app/Contents/MacOS/snowsql ]]; then
+#   alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/snowsql'
+# fi
 
 # Bring in the robots
-if [[ -x "$HOME/.claude/local/claude" ]]; then
-  alias claude="$HOME/.claude/local/claude"
-fi
+# if [[ -x "$HOME/.claude/local/claude" ]]; then
+#   alias claude="$HOME/.claude/local/claude"
+# fi
 
 #[[ -f ~/.anthropic_api_key ]] && source ~/.anthropic_api_key
 #[[ -f ~/.openai_api_key ]] && source ~/.openai_api_key
