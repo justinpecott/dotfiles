@@ -5,7 +5,7 @@ theme = Atom One Dark
 minimum-contrast = 1
 
 # Font
-font-family = MonoLisa Variable
+font-family = MonoLisaCode
 font-size = 14
 font-thicken = true
 font-thicken-strength = 150

@@ -44,7 +44,7 @@
     },
     "model_parameters": [],
   },
-  "buffer_font_family": "MonoLisa Variable",
+  "buffer_font_family": "MonoLisaCode",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
