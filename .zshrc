@@ -56,7 +56,7 @@ hs() {
 }
 
 # Path
-export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 # Brew
 # https://gist.github.com/jamesmurdza/6e5f86bae7d3b3db4201a52045a5e477
