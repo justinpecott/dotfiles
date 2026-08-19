@@ -24,7 +24,7 @@ Install Homebrew first: <http://brew.sh>
 Then install core tools:
 
 ```sh
-brew install bat duckdb gh git jq node pure ripgrep ruff sqlite tree uv wget zsh
+brew install bat duckdb fd gh git jq lsd node pure ripgrep ruff sqlite tree uv wget zsh
 brew install --cask snowflake-snowsql
 ```
 
