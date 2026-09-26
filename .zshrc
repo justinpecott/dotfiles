@@ -37,7 +37,9 @@ alias grep='grep --color=auto'
 export GREP_COLOR='1;91'
 
 # General aliases
+alias ls='lsd'
 alias l='lsd -l'
+alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
