@@ -11,6 +11,7 @@ This repo holds the personal defaults I use across my machines.
 - `~/.vimrc` + `.vim/colors/onedark.vim` – Vim config and colorscheme
 - `sublime/Preferences.sublime-settings` – Sublime Text preferences
 - `zed/settings.json` – Zed editor preferences
+- `vscode/settings.json` – VS Code user preferences
 - `ghostty/config.ghostty` – Ghostty terminal preferences
 
 ---
@@ -49,7 +50,6 @@ Example editor settings:
   "editor.fontLigatures": true
 }
 ```
-
 ---
 
 ## Local secrets and machine-specific files
@@ -103,6 +103,7 @@ uv sync
 - `pure` prompt is expected in zsh (`prompt pure` in `.zshrc`).
 - Homebrew shell environment is loaded in `.zprofile` when brew exists.
 - Zed preferences are tracked in `zed/settings.json`.
+- VS Code preferences are tracked in `vscode/settings.json` (synced to `~/Library/Application Support/Code/User/settings.json`).
 - Ghostty preferences are tracked in `ghostty/config.ghostty`.
 - Repository `.gitignore` contains local machine/editor junk and sensitive patterns.
 
