@@ -2,7 +2,7 @@
     name = Justin Pecott
     email = justin@pecott.net
 
-[includeIf "gitdir:~/Code/amazon/"]
+[includeIf "gitdir:~/Code/work/"]
     path = ~/.gitconfig-work
 
 [core]
@@ -23,12 +23,12 @@
     prune = true
 
 [push]
-    default = current
-    autoSetupRemote = true
-    followTags = true
+   default = simple
+   autoSetupRemote = true
+   followTags = true
 
 [branch]
-    autosetupmerge = always
+    autoSetupMerge = simple
 
 [pager]
     branch = false
