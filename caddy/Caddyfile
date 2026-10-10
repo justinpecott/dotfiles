@@ -1,0 +1,22 @@
+{
+	email justin@pecott.net
+}
+
+(cf) {
+	tls {
+		dns cloudflare <TOKEN>
+		resolvers 1.1.1.1
+	}
+}
+
+# default HTTPS (443) -> :8000
+local.justinpecott.link, mulder.justinpecott.link {
+	import cf
+	reverse_proxy 127.0.0.1:8000
+}
+
+# :3443 -> :3000
+local.justinpecott.link:3443, mulder.justinpecott.link:3443 {
+	import cf
+	reverse_proxy 127.0.0.1:3000
+}
