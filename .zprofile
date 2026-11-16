@@ -6,3 +6,5 @@ fi
 # Node via n — installs to ~/.n, no sudo
 export N_PREFIX="$HOME/.n"
 export PATH="$N_PREFIX/bin:$PATH"
+
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
