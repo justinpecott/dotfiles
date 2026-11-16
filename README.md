@@ -24,7 +24,7 @@ Install Homebrew first: <http://brew.sh>
 Then install core tools:
 
 ```sh
-brew install duckdb fd gh git jq lsd n pure ripgrep render ruff sqlite tree uv wget zsh
+brew install caddy duckdb fd gh git jq lsd n pure ripgrep render ruff sqlite tree uv wget zsh
 ```
 
 Then install Node with `n` (goes to `~/.n`, set via `N_PREFIX` in `.zprofile`):
