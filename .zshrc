@@ -21,9 +21,6 @@ export LANG="en_US.UTF-8"
 # Enable colors and completions
 autoload -U colors && colors
 autoload -Uz compinit && compinit
-if (( $+commands[zed] )) && (( $+functions[compdef] )); then
-  compdef _gnu_generic zed
-fi
 export CLICOLOR=1
 
 # Basic Setup
@@ -43,7 +40,6 @@ alias ll='lsd -l'
 alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
-alias cat='bat'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -52,13 +48,39 @@ alias h='history 1'
 alias which='type -a'
 
 # Search shell history: hs <pattern>
-hs() {
+function _hs {
   if [[ -z "$1" ]]; then
     echo "Usage: hs <pattern>"
     return 1
   fi
   history 1 | grep -i -- "$1"
 }
+alias hs='noglob _hs'
+
+# Download a URL, naming the file from the URL: dl <url>
+function _dl {
+  if [[ -z "$1" ]]; then
+    echo "Usage: dl <url>"
+    return 1
+  fi
+  local url="$1"
+  local name="${${url%%[?#]*}:t}"
+  [[ -z "$name" ]] && name=index
+  if [[ -e "$name" ]]; then
+    echo "dl: $name already exists" >&2
+    return 1
+  fi
+  local ctype
+  if ! ctype=$(curl -fL -o "$name" -w '%{content_type}' -- "$url"); then
+    command rm -f -- "$name"
+    return 1
+  fi
+  if [[ "$ctype" == text/html* && "$name" != *.* ]]; then
+    mv -- "$name" "$name.html" && name="$name.html"
+  fi
+  echo "$name"
+}
+alias dl='noglob _dl'
 
 # Path
 export PATH=/usr/local/bin:$PATH

@@ -10,7 +10,6 @@ This repo holds the personal defaults I use across my machines.
 - `~/.gitignore_global` – global git ignore patterns
 - `~/.vimrc` + `.vim/colors/onedark.vim` – Vim config and colorscheme
 - `sublime/Preferences.sublime-settings` – Sublime Text preferences
-- `zed/settings.json` – Zed editor preferences
 - `vscode/settings.json` – VS Code user preferences
 - `ghostty/config.ghostty` – Ghostty terminal preferences
 
@@ -25,8 +24,13 @@ Install Homebrew first: <http://brew.sh>
 Then install core tools:
 
 ```sh
-brew install bat duckdb fd gh git jq lsd node pure ripgrep ruff sqlite tree uv wget zsh
-brew install --cask snowflake-snowsql
+brew install duckdb fd gh git jq lsd n pure ripgrep render ruff sqlite tree uv wget zsh
+```
+
+Then install Node with `n` (goes to `~/.n`, set via `N_PREFIX` in `.zprofile`):
+
+```sh
+n lts
 ```
 
 ### zsh
@@ -98,11 +102,34 @@ uv sync
 
 ---
 
+## Node workflow (n)
+
+- Docs: <https://github.com/tj/n>
+- Node versions install to `~/.n` (`N_PREFIX` in `.zprofile`), so no `sudo` is needed.
+
+Quick examples:
+
+```sh
+brew install n
+n lts                # install + activate latest LTS
+n 22                 # install + activate a specific major
+n ls                 # list installed versions
+n                    # interactive picker
+n auto               # use version from .node-version / .nvmrc / package.json engines
+n prune              # remove all but the active version
+mkdir my-project && cd my-project
+npm init -y
+npm install -D typescript
+npx tsc --init
+npm run <script>
+```
+
+---
+
 ## Notes
 
 - `pure` prompt is expected in zsh (`prompt pure` in `.zshrc`).
 - Homebrew shell environment is loaded in `.zprofile` when brew exists.
-- Zed preferences are tracked in `zed/settings.json`.
 - VS Code preferences are tracked in `vscode/settings.json` (synced to `~/Library/Application Support/Code/User/settings.json`).
 - Ghostty preferences are tracked in `ghostty/config.ghostty`.
 - Repository `.gitignore` contains local machine/editor junk and sensitive patterns.
